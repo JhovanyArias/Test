@@ -1,10 +1,48 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color: darkgray;
-    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #666;
+    background: #f2f2f2;
+    font-size: 1em;
+    line-height: 1.5em;
+
+    padding-top: 80px;
+    /* Relleno superior igual a la altura de la cabecera*/
 }
 
-h1{
-    font-family: Tahoma;
+#main-header {
+    background: #333;
+    color: white;
+    height: 80px;
 }
+
+#main-header a {
+    color: white;
+}
+
+#main-header {
+    background: #333;
+    color: white;
+    height: 80px;
+    width: 100%;
+    /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0;
+    /* Posicionamos la cabecera al lado izquierdo */
+    top: 0;
+    /* Posicionamos la cabecera pegada arriba */
+    position: fixed;
+    /* Hacemos que la cabecera tenga una posición fija */
+}
+
+#logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+}
+
+#logo-header .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
