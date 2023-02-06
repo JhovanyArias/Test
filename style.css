@@ -1,48 +1,159 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #666;
-    background: #f2f2f2;
-    font-size: 1em;
-    line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000000;
+  background: #b4b4b4;
+  font-size: 1em;
+  line-height: 1.5em;
+  /* padding-top: 80px; */
+}
 
-    padding-top: 80px;
-    /* Relleno superior igual a la altura de la cabecera*/
+h1 {
+  text-align: center;
 }
 
 #main-header {
-    background: #333;
-    color: white;
-    height: 80px;
+  background: #000000;
+  color: white;
+  height: 80px;
 }
 
 #main-header a {
-    color: white;
+  color: white;
 }
 
-#main-header {
-    background: #333;
-    color: white;
-    height: 80px;
-    width: 100%;
-    /* hacemos que la cabecera ocupe el ancho completo de la página */
-    left: 0;
-    /* Posicionamos la cabecera al lado izquierdo */
-    top: 0;
-    /* Posicionamos la cabecera pegada arriba */
-    position: fixed;
-    /* Hacemos que la cabecera tenga una posición fija */
-}
+/* #main-header {
+  background: #000000;
+  color: white;
+  height: 80px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+} */
 
 #logo-header {
-    float: left;
-    padding: 15px 0 0 20px;
+  float: left;
+  padding: 15px 0 0 20px;
 }
 
 #logo-header .site-name {
-    display: block;
-    font-weight: 700;
-    font-size: 1.2em;
+  display: block;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
+#pokemon {
+  text-align: center;
+}
+
+#imagenes {
+  display: flex;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+}
+
+#imagenes img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+#imagenes img:hover {
+  cursor: grab;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+#heart {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  transform: rotate(-45deg);
+  animation: pulse 0.5s infinite;
+}
+#heart::before,
+#heart::after {
+  content: "";
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+}
+
+#heart::before {
+  top: -30px;
+}
+#heart::after {
+  left: 30px;
+}
+
+@keyframes pulse {
+  75% {
+    transform: rotate(-45deg);
+    scale: 1.1;
+  }
+}
+
+#letras {
+  margin: auto;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  font-size: x-large;
+  border-right: 2px solid;
+  width: 20ch;
+  animation: typing 1s steps(20), destello 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+#letras:hover {
+  animation: reverse;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes destello {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#andrea {
+  margin: auto;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  font-size: x-large;
+  border-right: 2px solid;
+  width: 20ch;
+  animation: escribir 1s steps(20), destellos 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+#andrea:hover {
+  animation: reverse;
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+}
+@keyframes destellos {
+  50% {
+    border-color: transparent;
+  }
+}
